@@ -1,6 +1,12 @@
 import telegramApi from "node-telegram-bot-api";
-import { gameOptions, againOptions } from "./options"
-const token = '6030869355:AAEXuCTN_Y1nxfEjGBKB4QZlBH86IrfTQ_o';
+import { gameOptions, againOptions } from "./options.js"
+
+import dotenv from "dotenv";
+
+dotenv.config();
+
+
+const token = process.env.token;
 
 
 const bot = new telegramApi(token, { polling: true });
